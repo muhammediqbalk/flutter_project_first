@@ -15,14 +15,14 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {    // to create a widget tree (Build context -> to Monitor the widget in the)
     return   Scaffold(
-      backgroundColor: Colors.red,  // to set a single color to the entire screen
+      // backgroundColor: Colors.red,  // to set a single color to the entire screen
     //   appBar: AppBar(
     // centerTitle: true,
     //     title:  const Text("Hello",style:TextStyle(fontSize:20,color:Colors.white),
     // ),
     //   ),
       body:   Container(
-        decoration:  BoxDecoration(
+        decoration:  const BoxDecoration(
           // image: DecorationImage(
             // fit: BoxFit.fill,     // to fit the image to the screen
       // image: NetworkImage("https://images.unsplash.com/photo-1687556510500-a4345d52f0e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"),
