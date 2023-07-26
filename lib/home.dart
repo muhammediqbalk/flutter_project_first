@@ -1,73 +1,162 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+void main() {
+  runApp(
+    MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.green),
+      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+    ),
+  );
+}
 
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          "My Home",
-          style: GoogleFonts.dancingScript(fontSize: 25, color: Colors.green),
-        ),
+        title: const Text("MyHome"),
+        actions: [
+          const Icon(Icons.camera_alt),
+          const SizedBox(
+            width: 30,
+          ),
+          const Icon(Icons.search),
+          PopupMenuButton(itemBuilder: (context) {
+            return [
+              const PopupMenuItem(child: Text("Settings")),
+              const PopupMenuItem(child: Text("New Group")),
+              const PopupMenuItem(child: Text("Payments")),
+              const PopupMenuItem(child: Text("NewBroadCast")),
+              const PopupMenuItem(child: Text("Settings")),
+            ];
+          })
+        ],
       ),
       body: ListView(
         children: [
-          const Center(child: Text("Fruits")),
+          Center(
+              child: Text("Fruits",
+                  style: GoogleFonts.dancingScript(
+                      fontSize: 80, color: Colors.green))),
           Card(
             child: ListTile(
-              leading: Image.asset("assets/icons/753489_coco_icon.png"),
-              title: Text("Kiwi"),
-              subtitle: Text("\$100"),
-              trailing: Icon(Icons.shopping_cart),
+              leading: Image.asset("assets/images/greennew.jpg"),
+              title: const Text("Apple"),
+              subtitle: const Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    Icons.done_all,
+                    color: Colors.blueAccent,
+                  ),
+                  Text("Hello"),
+                ],
+              ),
+              trailing: Column(children: [
+                IconButton(
+                    onPressed: () {}, icon: const Icon(Icons.shopping_cart)),
+                IconButton(
+                    onPressed: () {}, icon: const Icon(Icons.favorite)),
+              ]),
             ),
           ),
           Card(
+            color: Colors.lightGreen,
+            elevation: 5,
+            shadowColor: Colors.red,
             child: ListTile(
-              leading: Image.asset(
-                  "assets/icons/4619622_food_fruit_fruits_grapes_green grapes_icon.png"),
-              title: Text("Grape "),
-              subtitle: Text("\$100"),
-              trailing: Icon(Icons.shopping_cart),
-            ),
+                leading: const CircleAvatar(
+                    backgroundImage: AssetImage("assets/icons/4619636_food_fruit_fruits_mango_icon.png")),
+                title: Text(
+                  "Mango",
+                  style: GoogleFonts.aBeeZee(),
+                ),
+                subtitle: const Text("\$100"),
+                trailing: const Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(right: 8.0),
+                      child: Icon(Icons.favorite),
+                    ),
+                    // SizedBox(width: 20,),
+                    Icon(Icons.shopping_cart)
+                  ],
+                )),
           ),
           Card(
+            color: Colors.lightGreen,
+            elevation: 5,
+            shadowColor: Colors.red,
             child: ListTile(
-              leading: Image.asset(
-                  "assets/icons/4619624_food_fruit_fruits_pineapple_icon.png"),
-              title: Text("Pineapple "),
-              subtitle: Text("\$100"),
-              trailing: Icon(Icons.shopping_cart),
-            ),
+                leading: const CircleAvatar(
+                    backgroundImage: AssetImage("assets/images/greennew.jpg")),
+                title: Text(
+                  "Mango",
+                  style: GoogleFonts.aBeeZee(),
+                ),
+                subtitle: const Text("\$100"),
+                trailing: const Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(right: 8.0),
+                      child: Icon(Icons.favorite),
+                    ),
+                    // SizedBox(width: 20,),
+                    Icon(Icons.shopping_cart)
+                  ],
+                )),
           ),
           Card(
+            color: Colors.lightGreen,
+            elevation: 5,
+            shadowColor: Colors.red,
             child: ListTile(
-              leading: Image.asset(
-                  "assets/icons/4619631_food_fruit_fruits_peach_icon.png"),
-              title: Text("Apple"),
-              subtitle: Text("\$100"),
-              trailing: Icon(Icons.shopping_cart),
-            ),
+                leading: const CircleAvatar(
+                    backgroundImage: AssetImage("assets/images/greennew.jpg")),
+                title: Text(
+                  "Mango",
+                  style: GoogleFonts.aBeeZee(),
+                ),
+                subtitle: const Text("\$100"),
+                trailing: const Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(right: 8.0),
+                      child: Icon(Icons.favorite),
+                    ),
+                    // SizedBox(width: 20,),
+                    Icon(Icons.shopping_cart)
+                  ],
+                )),
           ),
           Card(
+            color: Colors.lightGreen,
+            elevation: 5,
+            shadowColor: Colors.red,
             child: ListTile(
-              leading: Image.asset(
-                  "assets/icons/4619635_food_fruit_fruits_watermelon_icon.png"),
-              title: Text("Watermelon "),
-              subtitle: Text("\$100"),
-              trailing: Icon(Icons.shopping_cart),
-            ),
-          ),
-          Card(
-            child: ListTile(
-              leading: Image.asset(
-                  "assets/icons/4619636_food_fruit_fruits_mango_icon.png"),
-              title: Text("Mango"),
-              subtitle: Text("\$100"),
-              trailing: Icon(Icons.shopping_cart),
-            ),
+                leading: const CircleAvatar(
+                    backgroundImage: AssetImage("assets/images/greennew.jpg")),
+                title: Text(
+                  "Mango",
+                  style: GoogleFonts.aBeeZee(),
+                ),
+                subtitle: const Text("\$100"),
+                trailing: const Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(right: 8.0),
+                      child: Icon(Icons.favorite),
+                    ),
+                    // SizedBox(width: 20,),
+                    Icon(Icons.shopping_cart)
+                  ],
+                )),
           ),
         ],
       ),

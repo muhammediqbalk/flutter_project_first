@@ -83,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                 if (uname.text != "" || pass.text != "") {
                   if (uname.text == username || pass.text == password) {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (contex) => const HomePage()));
+                        builder: (contex) => HomePage()));
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                       content: Text("Email/Password is Incorrect"),
