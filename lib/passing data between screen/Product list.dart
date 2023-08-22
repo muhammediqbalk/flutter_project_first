@@ -25,6 +25,7 @@ class ProductList extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(15),
         children: products.map((e) => ListTile(
+
           leading: Image.asset(e["image"]),
           title: Text(e["name"]),
           onTap: ()=> gotodetails(context,e['id']),
